@@ -71,7 +71,7 @@ export default function Invoices() {
 
       {/* Summary Cards */}
       <div className="grid gap-6 md:grid-cols-3">
-        <Card className="glass border-border/50">
+        <Card className="glass glass-hover border-border/50 transition-all duration-300">
           <CardHeader>
             <CardTitle className="text-sm font-medium text-muted-foreground">
               Total Invoiced
@@ -82,7 +82,7 @@ export default function Invoices() {
             <p className="text-xs text-muted-foreground mt-1">Across 5 invoices</p>
           </CardContent>
         </Card>
-        <Card className="glass border-border/50">
+        <Card className="glass glass-hover border-border/50 transition-all duration-300">
           <CardHeader>
             <CardTitle className="text-sm font-medium text-muted-foreground">
               Paid Amount
@@ -93,7 +93,7 @@ export default function Invoices() {
             <p className="text-xs text-muted-foreground mt-1">3 invoices paid</p>
           </CardContent>
         </Card>
-        <Card className="glass border-border/50">
+        <Card className="glass glass-hover border-border/50 transition-all duration-300">
           <CardHeader>
             <CardTitle className="text-sm font-medium text-muted-foreground">
               Outstanding
@@ -107,7 +107,7 @@ export default function Invoices() {
       </div>
 
       {/* Invoices Table */}
-      <Card className="glass border-border/50">
+      <Card className="glass glass-hover border-border/50 transition-all duration-300">
         <CardHeader>
           <CardTitle>Invoice History</CardTitle>
           <CardDescription>View and download your invoices</CardDescription>
@@ -140,14 +140,14 @@ export default function Invoices() {
                   </div>
 
                   <div className="flex gap-2">
-                    <Button variant="outline" size="icon" className="h-9 w-9">
+                    <Button variant="outline" size="icon" className="h-9 w-9 hover:border-primary/50 transition-all">
                       <Eye className="h-4 w-4" />
                     </Button>
-                    <Button variant="outline" size="icon" className="h-9 w-9">
+                    <Button variant="outline" size="icon" className="h-9 w-9 hover:border-primary/50 transition-all">
                       <Download className="h-4 w-4" />
                     </Button>
                     {invoice.status === 'Pending' && (
-                      <Button size="sm" className="glow-hover">
+                      <Button size="sm" className="glow-hover transition-all">
                         <CreditCard className="h-4 w-4 mr-2" />
                         Pay Now
                       </Button>

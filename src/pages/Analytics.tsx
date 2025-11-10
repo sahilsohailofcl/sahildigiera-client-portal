@@ -27,7 +27,12 @@ export default function Analytics() {
     { month: 'Jun', projects: 4 }
   ];
 
-  const COLORS = ['hsl(150 100% 50%)', 'hsl(150 80% 40%)', 'hsl(150 60% 30%)', 'hsl(150 40% 20%)'];
+  const COLORS = [
+    'hsl(72 65% 66%)',   // Lime Mist
+    'hsl(122 21% 55%)',  // Verdant Slate
+    'hsl(72 55% 56%)',   // Darker Lime
+    'hsl(122 21% 45%)'   // Darker Verdant
+  ];
 
   return (
     <div className="space-y-8">
@@ -40,7 +45,7 @@ export default function Analytics() {
 
       <div className="grid gap-6 md:grid-cols-2">
         {/* Spending Over Time */}
-        <Card className="glass border-border/50">
+        <Card className="glass glass-hover border-border/50 transition-all duration-300">
           <CardHeader>
             <CardTitle>Monthly Spending</CardTitle>
             <CardDescription>Your investment over the last 6 months</CardDescription>
@@ -65,7 +70,7 @@ export default function Analytics() {
         </Card>
 
         {/* Project Distribution */}
-        <Card className="glass border-border/50">
+        <Card className="glass glass-hover border-border/50 transition-all duration-300">
           <CardHeader>
             <CardTitle>Project Distribution</CardTitle>
             <CardDescription>Breakdown by project type</CardDescription>
@@ -100,7 +105,7 @@ export default function Analytics() {
         </Card>
 
         {/* Project Performance */}
-        <Card className="glass border-border/50 md:col-span-2">
+        <Card className="glass glass-hover border-border/50 md:col-span-2 transition-all duration-300">
           <CardHeader>
             <CardTitle>Project Completion Trend</CardTitle>
             <CardDescription>Number of projects completed per month</CardDescription>

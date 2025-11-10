@@ -53,7 +53,7 @@ export default function Settings() {
 
       <div className="grid gap-6 lg:grid-cols-2">
         {/* Profile Settings */}
-        <Card className="glass border-border/50">
+        <Card className="glass glass-hover border-border/50 transition-all duration-300">
           <CardHeader>
             <CardTitle>Profile Information</CardTitle>
             <CardDescription>Update your personal details</CardDescription>
@@ -67,7 +67,7 @@ export default function Settings() {
                     {user?.name.charAt(0).toUpperCase()}
                   </AvatarFallback>
                 </Avatar>
-                <Button variant="outline" size="sm">
+                <Button variant="outline" size="sm" className="hover:border-primary/50 transition-all">
                   Change Avatar
                 </Button>
               </div>
@@ -93,7 +93,7 @@ export default function Settings() {
                 />
               </div>
 
-              <Button type="submit" className="w-full glow-hover">
+              <Button type="submit" className="w-full glow-hover transition-all">
                 Save Changes
               </Button>
             </form>
@@ -101,7 +101,7 @@ export default function Settings() {
         </Card>
 
         {/* Password Change */}
-        <Card className="glass border-border/50">
+        <Card className="glass glass-hover border-border/50 transition-all duration-300">
           <CardHeader>
             <CardTitle>Change Password</CardTitle>
             <CardDescription>Update your account password</CardDescription>
@@ -144,7 +144,7 @@ export default function Settings() {
                 />
               </div>
 
-              <Button type="submit" className="w-full glow-hover">
+              <Button type="submit" className="w-full glow-hover transition-all">
                 Update Password
               </Button>
             </form>
@@ -152,7 +152,7 @@ export default function Settings() {
         </Card>
 
         {/* Notifications */}
-        <Card className="glass border-border/50 lg:col-span-2">
+        <Card className="glass glass-hover border-border/50 lg:col-span-2 transition-all duration-300">
           <CardHeader>
             <CardTitle>Notification Preferences</CardTitle>
             <CardDescription>Manage how you receive updates</CardDescription>
@@ -165,9 +165,9 @@ export default function Settings() {
                 'Support ticket responses',
                 'Marketing and promotional emails'
               ].map((item) => (
-                <div key={item} className="flex items-center justify-between p-3 rounded-lg border border-border/50 bg-card/50">
+                <div key={item} className="flex items-center justify-between p-3 rounded-lg border border-border/50 bg-card/50 hover:bg-card/80 transition-all">
                   <span className="text-sm text-foreground">{item}</span>
-                  <Button variant="outline" size="sm">
+                  <Button variant="outline" size="sm" className="hover:border-primary/50 transition-all">
                     Enabled
                   </Button>
                 </div>

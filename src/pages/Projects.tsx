@@ -76,7 +76,7 @@ export default function Projects() {
 
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project) => (
-          <Card key={project.id} className="glass glass-hover border-border/50">
+          <Card key={project.id} className="glass glass-hover border-border/50 transition-all duration-300 hover:scale-[1.02]">
             <CardHeader>
               <div className="flex items-start justify-between">
                 <div className="space-y-1">
@@ -115,7 +115,7 @@ export default function Projects() {
               </div>
 
               <div className="pt-2">
-                <Button variant="outline" className="w-full group">
+                <Button variant="outline" className="w-full group transition-all hover:border-primary/50">
                   View Details
                   <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>

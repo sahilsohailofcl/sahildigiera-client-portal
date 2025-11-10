@@ -99,7 +99,7 @@ export default function Support() {
 
       <div className="grid gap-6 lg:grid-cols-2">
         {/* New Ticket Form */}
-        <Card className="glass border-border/50">
+        <Card className="glass glass-hover border-border/50 transition-all duration-300">
           <CardHeader>
             <CardTitle>Create New Ticket</CardTitle>
             <CardDescription>Submit your question or issue</CardDescription>
@@ -129,7 +129,7 @@ export default function Support() {
                   className="bg-input/50 resize-none"
                 />
               </div>
-              <Button type="submit" className="w-full glow-hover">
+              <Button type="submit" className="w-full glow-hover transition-all">
                 Submit Ticket
               </Button>
             </form>
@@ -137,7 +137,7 @@ export default function Support() {
         </Card>
 
         {/* Active Tickets */}
-        <Card className="glass border-border/50">
+        <Card className="glass glass-hover border-border/50 transition-all duration-300">
           <CardHeader>
             <CardTitle>Your Tickets</CardTitle>
             <CardDescription>View and manage your support tickets</CardDescription>
@@ -175,7 +175,7 @@ export default function Support() {
                     <span>Last reply {ticket.lastReply}</span>
                   </div>
 
-                  <Button variant="outline" size="sm" className="w-full">
+                  <Button variant="outline" size="sm" className="w-full hover:border-primary/50 transition-all">
                     View Conversation
                   </Button>
                 </div>

@@ -75,7 +75,7 @@ export default function Dashboard() {
       {/* Stats Grid */}
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {stats.map((stat) => (
-          <Card key={stat.title} className="glass glass-hover border-border/50">
+          <Card key={stat.title} className="glass glass-hover border-border/50 transition-all duration-300 hover:scale-[1.02]">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium text-muted-foreground">
                 {stat.title}
@@ -96,7 +96,7 @@ export default function Dashboard() {
       </div>
 
       {/* Recent Projects */}
-      <Card className="glass border-border/50">
+      <Card className="glass glass-hover border-border/50 transition-all duration-300">
         <CardHeader>
           <CardTitle className="text-2xl">Recent Projects</CardTitle>
           <CardDescription>Track your ongoing projects and their progress</CardDescription>
