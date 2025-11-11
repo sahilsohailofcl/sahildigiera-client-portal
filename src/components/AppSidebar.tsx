@@ -50,7 +50,7 @@ export function AppSidebar() {
       <SidebarHeader className="border-b border-sidebar-border p-4">
         {!collapsed && (
           <div className="flex items-center gap-2">
-            <div className="h-8 w-8 bg-primary flex items-center justify-center">
+            <div className="h-8 w-8 flex items-center justify-center">
               <img
                 src={sd}
                 alt="Sahil DigiEra Logo"
@@ -64,7 +64,7 @@ export function AppSidebar() {
           </div>
         )}
         {collapsed && (
-          <div className="h-8 w-8 mx-auto bg-primary flex items-center justify-center">
+          <div className="h-8 w-8 mx-auto flex items-center justify-center">
             <img
               src={sd}
               alt="Sahil DigiEra Logo"
