@@ -25,6 +25,7 @@ import {
 } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import sd from "../../../public/SD.webp"
 
 const navItems = [
   { title: 'Dashboard', url: '/dashboard', icon: LayoutDashboard },
@@ -49,8 +50,12 @@ export function AppSidebar() {
       <SidebarHeader className="border-b border-sidebar-border p-4">
         {!collapsed && (
           <div className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">SD</span>
+            <div className="h-8 w-8 bg-primary flex items-center justify-center">
+              <img
+                src={sd}
+                alt="Sahil DigiEra Logo"
+                className="w-10 h-10 object-cover"
+              />
             </div>
             <div>
               <h2 className="text-sm font-semibold text-sidebar-foreground">Sahil DigiEra</h2>
@@ -59,8 +64,12 @@ export function AppSidebar() {
           </div>
         )}
         {collapsed && (
-          <div className="h-8 w-8 mx-auto rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">SD</span>
+          <div className="h-8 w-8 mx-auto bg-primary flex items-center justify-center">
+            <img
+              src={sd}
+              alt="Sahil DigiEra Logo"
+              className="w-10 h-10 object-cover"
+            />
           </div>
         )}
       </SidebarHeader>
